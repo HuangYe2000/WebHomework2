@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/finalwork.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+</head>
+<body>
+    <!--系统时钟和导航-->
+    <div id="nav">
+        <img src="img/new_logo.png" id="logo"/>
+        <div id="nav-list">
+			<ul class="clear">
+				<li><a href="#">国际</a></li>
+				<li><a href="#">国内</a></li>
+				<li><a href="#">科技</a></li>
+				<li><a href="#">社会</a></li>
+				<li><a href="#">艺术</a></li>
+				<li><a href="#">旅游</a></li>
+				<li><a href="#">财经</a></li>
+				<li><a href="#">评论</a></li>
+                <li><a href="#">体育</a></li>
+                <li><a href="#">教育</a></li>
+			</ul>	
+        </div>
+        <div id="time">
+            
+        </div>
+    </div>
+    <!--banner图-->
+    <div id="banner">
+        <img src="img/banner1.jpg" id="banner-img"/>
+        <img src="img/btn-left.png" id="btn-left" onclick="left()"/>
+        <img src="img/btn-right.png" id="btn-right" onclick="right()"/>
+        <p id="banner-text"></p>
+    </div>
+    <div class="middle-text">
+        <ul>
+            <li><a href="#"><h3>时政微纪录丨跨越24年的牵挂</h3></a></li>
+            <li><a href="#">习近平为文化和自然遗产保护工作指明方向</a></li>
+            <li><a href="#">习主席再谈这个全球抗疫根本大计</a></li>
+        </ul>
+         <ul>
+            <li><a href="#"><h3>社评：推特，你应该最清楚自己多么虚伪</h3></a></li>
+            <li><a href="#">国家卫健委：新增确诊病例11例 其中本土病例6例 均在北京</a></li>
+            <li><a href="#">北京新发地批发市场休市，超万人将做核酸检测</a></li>
+        </ul>
+        <ul>
+            <li><a href="#"><h3>多国新冠病例增加引担忧，全球股市下跌</h3></a></li>
+            <li><a href="#">美国疫情反弹？多州单日新增刷新高 7月初死亡人数或达14万</a></li>
+            <li><a href="#">特朗普：多数情况下应禁止警察"锁喉"制服他人 但必要时可用</a></li>
+        </ul>
+        <ul>
+            <li><a href="#"><img src="img/9a9cebda-1a85-468e-a54d-a4d611e63c41.png"></a></li>
+        </ul>
+   </div>
+   <!--滚屏效果-->
+   <div id="roll-text">
+       <div class="move">
+        <span id="roll"> Hi，欢迎来到环球网，我们有着最快最全的新闻报道，请点击下面的板块，查看你喜欢的内容吧！</span>
+       </div> 
+   </div>
+   <!--不同板块切换-->
+   <div id="title">
+       <a href="javascript:newsOne()" id="title1" onmouseover="mOver(this);" onmouseout="mOut(this);">时事要闻</a>
+       <a href="javascript:newsTwo()" id="title2" onmouseover="mOver(this);" onmouseout="mOut(this);">国际视野</a>
+       <a href="javascript:newsThree()" id="title3" onmouseover="mOver(this);" onmouseout="mOut(this);">科技生活</a>
+       <a href="javascript:newsFour()" id="title3" onmouseover="mOver(this);" onmouseout="mOut(this);">社会热点</a>
+   </div>
+   <div class="news" id="news1">
+    <div class="news-content">
+        <a href="#"><img src="img/346.jpg" >
+        <h1>国家卫健委：昨日新增确诊病例11例，本土6例均在北京</h1></a>
+        <p><a href="#">绿政公署  |  2小时前  | 116浏览</a></p>
+    </div>
+        <div class="news-content">
+        <a href="#"><img src="img/311.jpg">
+        <h1>新发地三文鱼案板测出新冠病毒，北京多家超市连夜下架三文鱼</h1></a>
+        <p><a href="#">绿政公署  |  1小时前  | 615浏览</a></p>
+    </div>
+        <div class="news-content">
+        <a href="#"><img src="img/510.jpeg">
+            <h1>张文宏：中国会持续处于“接近零本土病例”状态，而非无病例</h1></a>
+            <p><a href="#">浦江头条  |  2小时前  | 47浏览</a></p>
+        </div>
+    <div class="news-content">
+        <a href="#"><img src="img/691.jpg" >
+        <h1>澳籍被告人卡姆·吉莱斯比因走私毒品罪在广州被判死刑</h1></a>
+        <p><a href="#">一号专案  |  1小时前  | 734浏览</a></p>
+    </div>
+        <div class="news-content">
+        <a href="#"><img src="img/559.jpg" >
+        <h1>受疫情影响，5条京冀跨省公交线路暂缓恢复运营</h1></a>
+        <p><a href="#">中国政库  |  刚刚  </a></p>
+    </div>
+        <div class="news-content">
+        <a href="#"><img src="img/437.jpg" >
+        <h1>北京新发地长途客运站今日已停运，已购票乘客可办理退票</h1></a>
+        <p><a href="#">中国政库  |  刚刚  </a></p>
+    </div>
+   </div>
+
+    <div class="news" id="news2">
+        <div class="news-content">
+            <a href="#"><img src="img/710.jpg" >
+            <h1>美国伯克利市禁止警察使用化学制剂，警长：那只好开枪了</h1></a>
+            <p><a href="#">环球时报  |  9分钟前</a></p>
+        </div>
+            <div class="news-content">
+            <a href="#"><img src="img/358.jpg">
+            <h1>我在纽约丨经济重启，病毒再来：美国多地恐成纽约第二？</h1></a>
+            <p><a href="#">澎湃国际  |  31分钟前  </a></p>
+        </div>
+            <div class="news-content">
+            <a href="#"><img src="img/721.jpg">
+                <h1>韩国表示将严查对朝发传单行为，朝鲜：信赖已彻底消失</h1></a>
+                <p><a href="#">澎湃国际  |  42分钟前</a></p>
+            </div>
+        <div class="news-content">
+            <a href="#"><img src="img/691.jpg" >
+            <h1>澳籍被告人卡姆·吉莱斯比因走私毒品罪在广州被判死刑</h1></a>
+            <p><a href="#">一号专案  |  1小时前  | 734浏览</a></p>
+        </div>
+        <div class="news-content">
+            <a href="#"><img src="img/844.jpg" >
+            <h1>拜登的副总统搭档名单缩小：沃伦、哈里斯和赖斯希望最大</h1></a>
+            <p><a href="#">澎湃国际  |  44分钟前  </a></p>
+        </div>
+        <div class="news-content">
+            <a href="#"><img src="img/768.jpg" >
+            <h1>英国4月GDP跌20.4%创历史记录，约翰逊面临解禁压力</h1></a>
+            <p><a href="#">澎湃国际  |  56分钟前  </a></p>
+        </div>
+    </div>
+    <div class="news" id="news3">
+        <div class="news-content">
+            <a href="#"><img src="img/news3-1.jpg" >
+            <h1>嫦娥五号返回器安全着陆</h1></a>
+            <p><a href="#">环球时报  |  9分钟前</a></p>
+        </div>
+            <div class="news-content">
+            <a href="#"><img src="img/new3-2.jpg">
+            <h1>华为在英开设第一家零售店</h1></a>
+            <p><a href="#">澎湃国际  |  31分钟前  </a></p>
+        </div>
+            <div class="news-content">
+            <a href="#"><img src="img/news3-3.jpg">
+                <h1>长征八号遥一火箭垂直转运至发射区</h1></a>
+                <p><a href="#">澎湃国际  |  42分钟前</a></p>
+            </div>
+        <div class="news-content">
+            <a href="#"><img src="img/news3-4.jpg" >
+            <h1>浙江宁波发现目前世界最早古稻田</h1></a>
+            <p><a href="#">一号专案  |  1小时前  | 734浏览</a></p>
+        </div>
+        <div class="news-content">
+            <a href="#"><img src="img/news3-5.jpg" >
+            <h1>新型中低速磁浮列车在长春下线</h1></a>
+            <p><a href="#">澎湃国际  |  44分钟前  </a></p>
+        </div>
+        <div class="news-content">
+            <a href="#"><img src="img/news3-6.jpg" >
+            <h1>盐通高铁进入通车“倒计时”</h1></a>
+            <p><a href="#">澎湃国际  |  56分钟前  </a></p>
+        </div>
+    </div>
+    <div class="news" id="news4">
+        <div class="news-content">
+            <a href="#"><img src="img/new4-1.jpg" >
+            <h1>纳卡地区再次爆发冲突</h1></a>
+            <p><a href="#">环球时报  |  9分钟前</a></p>
+        </div>
+            <div class="news-content">
+            <a href="#"><img src="img/new4-2.jpg">
+            <h1>北京：玉渊潭公园金光“穿”洞</h1></a>
+            <p><a href="#">澎湃国际  |  31分钟前  </a></p>
+        </div>
+            <div class="news-content">
+            <a href="#"><img src="img/new4-3.jpg">
+                <h1>解放军军机昨再进台西南空域</h1></a>
+                <p><a href="#">澎湃国际  |  42分钟前</a></p>
+            </div>
+        <div class="news-content">
+            <a href="#"><img src="img/new4-4.jpg" >
+            <h1>黄河壶口：冰瀑玉壶 美不胜收</h1></a>
+            <p><a href="#">一号专案  |  1小时前  | 734浏览</a></p>
+        </div>
+        <div class="news-content">
+            <a href="#"><img src="img/news4-5.jpg" >
+            <h1>广西南宁气温骤降 动物扎推“花式”避寒</h1></a>
+            <p><a href="#">澎湃国际  |  44分钟前  </a></p>
+        </div>
+        <div class="news-content">
+            <a href="#"><img src="img/news4-6.jpg" >
+            <h1>新疆哈密戈壁建出“太阳城”</h1></a>
+            <p><a href="#">澎湃国际  |  56分钟前  </a></p>
+        </div>
+    </div>
+    <div class="bottom1">
+        <div class="bottom1-text">
+                <ul class="clear">
+                    <li><a href="#" class="text1">关于环球网</a></li>
+                    <li><a href="#">工作应聘</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">广告及合作</a></li>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">友情链接</a></li>
+                    <li><a href="#">新闻举报</a></li>
+                    <li><a href="#">严正声明</a></li>
+                    <li><a href="#"><img src="img/label_sm_90030.png"></a></li>
+                </ul>
+        </div>
+        <div class="bottom2-text">	
+            <p>Copyright©2014~2020&nbsp;The&nbsp;Paper&nbsp;All&nbsp;rights reserved.上海东方报业有限公司 | 沪ICP证：沪B2-20170116 | 沪ICP备14003370号 | 互联网新闻信息服务许可证：31120170006</p>
+            <p><a href="#"><img src="img/ghs.png" />沪公网安备&nbsp;31010602000299号</a></p>	 
+            </div> 			  	
+    </div>
+</body>
+<script>
+    //系统时钟
+    function SystemTime(){
+        var time = document.getElementById("time");
+        var now = new Date();
+        var year = now.getFullYear();
+        var month = now.getMonth() + 1;
+        var day = now.getDay();
+        var date = now.getDate();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        var second = now.getSeconds();
+        var week = new Array("星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日");
+        var nowWeek = week[day-1];
+        if(minute < 0){
+            minute = "0" + minute;
+        }
+        if(second < 10){
+            second = "0" + second;
+        }
+        time.innerHTML = year + "年" + month + "月" + date + "日" + "&emsp;" + hour + "时" + minute + "分" + second + "秒" + "&emsp;" + nowWeek; 
+    };
+    //周期执行系统时钟
+    window.onload = function() {
+        window.setInterval("SystemTime()", 1000);
+    };
+    //滚屏字幕
+    var roll = document.getElementById("roll");
+    var move = document.getElementsByClassName("move");
+    move[0].style.marginLeft = "20px";
+    var moveText = setInterval(function() {
+        var marginLeft = parseInt(move[0].style.marginLeft);
+        if(marginLeft == 1000){
+            marginLeft = 0;
+            move[0].style.marginTop = "10px";
+        }
+        move[0].style.marginLeft = (marginLeft+1) + "px";
+    }, 15);
+
+    //banner图
+    var banner = document.getElementById("banner-img");
+    var bannerText = document.getElementById("banner-text");
+    var leftBanner = document.getElementById("left-btn");
+    var rightBanner = document.getElementById("right-btn");
+    var num = 0;
+    var imgSrc = new Array("img/banner1.jpg", "img/banner2.jpg", "img/banner3.jpg", "img/banner4.jpg", "img/banner5.jpg");
+    var bannerContent = new Array("长征八号遥一火箭垂直转运至发射区", "伊拉克基尔库克省两口油井遭袭 现场大火持续", "巴勒斯坦残疾小伙在加沙跑酷 “飞跃”在城市之中", "韩国开启速冻模式！京畿道废弃隧道内地面“长出“冰柱", "中国维和部队恢复联黎人道主义扫雷行动");
+    bannerText.innerHTML = bannerContent[num];
+    //左按钮切换图片
+    function left(){
+        if(num == 0){
+            num = 4;
+            banner.setAttribute("src", imgSrc[num]);
+            bannerText.innerHTML = bannerContent[num];
+        }
+        else{
+            num--;
+            banner.setAttribute("src", imgSrc[num]);
+            bannerText.innerHTML = bannerContent[num];
+        }
+    };
+    //右按钮切换图片
+    function right(){
+        if(num == 4){
+            num = 0;
+            banner.setAttribute("src", imgSrc[num]);
+            bannerText.innerHTML = bannerContent[num];
+        }
+        else{
+            num++;
+            banner.setAttribute("src", imgSrc[num]);
+            bannerText.innerHTML = bannerContent[num];
+        }
+    };
+    //不同板块切换的函数
+    var news1 = document.getElementById("news1");
+    var news2 = document.getElementById("news2");
+    var news3 = document.getElementById("news3");
+    var news4 = document.getElementById("news4");
+    //当点击第一个板块
+    function newsOne(){
+        news1.style.display = "inline";
+        news2.style.display = "none";
+        news3.style.display = "none";
+        news4.style.display = "none";
+    };
+    //当点击第二个板块
+    function newsTwo() {
+        news1.style.display = "none";
+        news2.style.display = "inline";
+        news3.style.display = "none";
+        news4.style.display = "none";
+    };
+    //当点击第三个板块
+    function newsThree() {
+        news1.style.display = "none";
+        news2.style.display = "none";
+        news3.style.display = "inline";
+        news4.style.display = "none";
+    };
+    //当点击第四个板块
+    function newsFour() {
+        news1.style.display = "none";
+        news2.style.display = "none";
+        news3.style.display = "none";
+        news4.style.display = "inline";
+    };
+    //鼠标移上后特殊效果
+    function mOver(pDOM){
+    pDOM.style.fontSize = '30px';  //调整字体大小为20个像素
+    };
+    //鼠标指针移出
+    function mOut(pDOM){
+    pDOM.style.fontSize = '';    //调整字体大小样式为默认
+    };
+</script>
+</html>
